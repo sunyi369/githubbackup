@@ -144,8 +144,8 @@ for repo_name in "${repo_names[@]}"; do
                 unset IFS
 
                 for ((i = 0; i < ${#asset_arr_prerelease[@]}; i += 2)); do
-                    asset_name_prerelease="${asset_arr_release[$i]}"
-                    asset_url_prerelease="${asset_arr_release[$i + 1]}"
+                    asset_name_prerelease="${asset_arr_prerelease[$i]}"
+                    asset_url_prerelease="${asset_arr_prerelease[$i + 1]}"
 
                     download_with_retry "$asset_url_prerelease" "$download_dir_prerelease/$asset_name_prerelease"
                 done
